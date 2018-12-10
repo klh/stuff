@@ -1,0 +1,37 @@
+{
+  "name": "razzle-examples-with-afterjs",
+  "version": "2.4.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "razzle start",
+    "build": "razzle build",
+    "test": "razzle test --env=jsdom",
+    "start:prod": "NODE_ENV=production node build/server.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@babel/core": "7.2.0",
+    "@jaredpalmer/after": "latest",
+    "apisauce": "1.0.1",
+    "babel-loader": "8.0.4",
+    "enzyme": "3.7.0",
+    "enzyme-adapter-react-16": "1.7.0",
+    "express": "^4.16.2",
+    "jest-enzyme": "7.0.1",
+    "query-string": "6.2.0",
+    "razzle": "2.4.0",
+    "react": "^16.2.0",
+    "react-bootstrap": "0.32.4",
+    "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0",
+    "react-router-dom": "^4.2.2",
+    "storybook-react-router": "1.0.2",
+    "storybook-readme": "4.0.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^4.0.12",
+    "@storybook/addon-links": "^4.0.12",
+    "@storybook/react": "^4.0.12"
+  }
+}

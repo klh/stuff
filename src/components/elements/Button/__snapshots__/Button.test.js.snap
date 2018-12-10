@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> Snapshot mathes 1`] = `
+<button
+  class="btn btn-primary"
+  type="button"
+>
+  snapshot
+</button>
+`;

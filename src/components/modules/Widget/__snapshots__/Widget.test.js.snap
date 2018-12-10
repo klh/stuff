@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Widget /> Snapshot mathes 1`] = `
+<Widget
+  city="--"
+  humidity={0}
+  submitHandler={[Function]}
+  temp={0}
+  wind="--"
+>
+  <div
+    className="widget"
+  >
+    <div
+      className="panel panel-info"
+    >
+      <div
+        className="panel-heading"
+      >
+        Weather in 
+        <b>
+          --
+        </b>
+      </div>
+      <ul
+        className="list-group"
+      >
+        <li
+          className="list-group-item"
+        >
+          Temperature: 
+          <b>
+            0
+            °C
+          </b>
+        </li>
+        <li
+          className="list-group-item"
+        >
+          Humidity: 
+          <b>
+            0
+          </b>
+        </li>
+        <li
+          className="list-group-item"
+        >
+          Wind: 
+          <b>
+            --
+          </b>
+        </li>
+        <li
+          className="list-group-item"
+        >
+          <LookupField
+            defaultValue="--"
+            submitHandler={[Function]}
+          >
+            <form
+              action="http://localhost:3000"
+              className="form-inline"
+              method="get"
+              onSubmit={[Function]}
+            >
+              <div
+                className="form-group"
+              >
+                <input
+                  className="form-control"
+                  defaultValue="--"
+                  name="city"
+                  placeholder="City"
+                  type="text"
+                />
+              </div>
+              <input
+                className="btn btn-default"
+                type="submit"
+              />
+            </form>
+          </LookupField>
+        </li>
+      </ul>
+    </div>
+  </div>
+</Widget>
+`;
