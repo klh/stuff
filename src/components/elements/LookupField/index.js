@@ -1,1 +1,1 @@
-export {default} from './LookupField'
+export {default} from './LookupField';

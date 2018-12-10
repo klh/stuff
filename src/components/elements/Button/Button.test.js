@@ -4,13 +4,12 @@ import {render} from 'enzyme';
 import Button from './';
 
 describe('<Button />', () => {
+  it('Snapshot mathes', () => {
+    const ButtonRender = render(<Button>snapshot</Button>);
+    expect(ButtonRender).toMatchSnapshot();
+  });
 
-    it('Snapshot mathes', () => {
-        const ButtonRender = render(<Button>snapshot</Button>);
-        expect(ButtonRender).toMatchSnapshot();
-    });
-
-    /*
+  /*
     // Jest/ Enzyme does not yet support react.memo - but it'll be released in a week or so, then it would be good to test like so:
 
     it('No Children should match Default Text', () => {
@@ -21,6 +20,4 @@ describe('<Button />', () => {
     });
 
     */
-
 });
-

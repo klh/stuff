@@ -5,9 +5,12 @@ import withDocs from 'storybook-readme/with-docs';
 import WidgetReadme from './README.md';
 import Widget from './';
 
-storiesOf('Widget', module)
-    .add('Primary',
-        withDocs(WidgetReadme,
-            () => <Widget type="primary" onClick={action('clicked')} submitHandler={() => {
-            }}>Primary</Widget>
-        ));
+storiesOf('Widget', module).add(
+  'Primary',
+  withDocs(WidgetReadme, () => (
+    <Widget type="primary" onClick={action('clicked')} submitHandler={() => {
+    }}>
+      Primary
+    </Widget>
+  ))
+);

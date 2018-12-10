@@ -8,34 +8,41 @@ import './LookupField.css';
  */
 
 class LookupField extends React.PureComponent {
+  //PropTypes
+  static propTypes = {
+    submitHandler: PropTypes.func.isRequired,
+    children: PropTypes.node,
+    defaultValue: PropTypes.string
+  };
 
-    //PropTypes
-    static propTypes = {
-        submitHandler: PropTypes.func.isRequired,
-        children: PropTypes.node,
-        defaultValue: PropTypes.string
-    };
+  static defaultProps = {
+    children: null,
+    defaultValue: ''
+  };
 
-    static defaultProps = {
-        children: null,
-        defaultValue: ''
-    };
+  render() {
+    const {children, submitHandler, defaultValue} = this.props;
 
-    render() {
-
-        const {children, submitHandler, defaultValue} = this.props;
-
-        return (
-            <form className="form-inline" action="http://localhost:3000" method="get" onSubmit={submitHandler}>
-                {children}
-                <div className="form-group">
-                    <input type="text" className="form-control" name="city" placeholder="City"
-                           defaultValue={defaultValue}/>
-                </div>
-                <input type="submit" className="btn btn-default"/>
-            </form>
-        )
-    }
+    return (
+      <form
+        className="form-inline"
+        action="http://localhost:3000"
+        method="get"
+        onSubmit={submitHandler}>
+        {children}
+        <div className="form-group">
+          <input
+            type="text"
+            className="form-control"
+            name="city"
+            placeholder="City"
+            defaultValue={defaultValue}
+          />
+        </div>
+        <input type="submit" className="btn btn-default"/>
+      </form>
+    );
+  }
 }
 
 export default LookupField;

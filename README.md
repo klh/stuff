@@ -21,6 +21,7 @@ yarn run test
  * this wil start the jest + enzyme test to run through the test cases, I do not normally test components to death, but normally implement end-end testing to catch logic & implementation errors.
  * i believe in sanity and informed choice. Running snapshot testing of components can to a very large degree cover most test cases (that is if you create you components atomically)
  * Normally i'd implement a Visual Diff engine on top of Casper or another Headless browser to catch all Style regression and errors.
+ * too see how this works in practice change the padding in WidgetWrapper.css to 0 while tests are running
 
 ```bash
 yarn run storybook

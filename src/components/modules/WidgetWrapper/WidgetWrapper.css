@@ -1,6 +1,3 @@
-/*
-Nothing here - in a fully developed DX this would be picked up in the webpack flow and compiled, parsed accordingly.
-The idea is here to only have styles responsible for the component itself reside with the component BEM/Atomic style
-
-Makes things much more maintainable
-*/
+.widget__wrapper {
+    padding: 1rem 0;
+}

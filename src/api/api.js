@@ -1,11 +1,11 @@
-import {create} from 'apisauce'
+import {create} from 'apisauce';
 
 export const appIDKey = '166d00e26d3ff2c6149e89feccc5c59a';
 // define the api
 export const api = create({
-    baseURL: 'http://api.openweathermap.org/data/2.5',
-    timeout: 30000,
-    headers: {'Accept': 'application/json'}
+  baseURL: 'http://api.openweathermap.org/data/2.5',
+  timeout: 30000,
+  headers: {Accept: 'application/json'}
 });
 
 /*

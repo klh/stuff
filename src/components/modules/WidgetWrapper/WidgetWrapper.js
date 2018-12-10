@@ -10,29 +10,34 @@ import './WidgetWrapper.css';
  */
 
 class WidgetWrapper extends React.Component {
-    static propTypes = {
-        wind: PropTypes.string.isRequired,
-        city: PropTypes.string.isRequired,
-        humidity: PropTypes.number.isRequired,
-        temp: PropTypes.number.isRequired
-    };
+  static propTypes = {
+    wind: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+    humidity: PropTypes.number.isRequired,
+    temp: PropTypes.number.isRequired
+  };
 
-    submitHandler = (e) => {
-        this.props.history.push(`/?city=${e.target.city.value}`);
-        e.preventDefault();
-    };
+  submitHandler = (e) => {
+    this.props.history.push(`/?city=${e.target.city.value}`);
+    e.preventDefault();
+  };
 
-    render() {
-        const {city, temp, wind, humidity} = this.props;
+  render() {
+    const {city, temp, wind, humidity} = this.props;
 
-        return (
-            <div>
-                <h1>Weather Widget</h1>
-                <Widget submitHandler={this.submitHandler} city={city} wind={wind} humidity={humidity}
-                        temp={temp}/>
-            </div>
-        );
-    }
+    return (
+      <div className="widget__wrapper widget__weather">
+        <h1>Weather Widget</h1>
+        <Widget
+          submitHandler={this.submitHandler}
+          city={city}
+          wind={wind}
+          humidity={humidity}
+          temp={temp}
+        />
+      </div>
+    );
+  }
 }
 
 export default WidgetWrapper;

@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import queryString from 'query-string';
 
-import {getWeatherForCity} from './api/endpoints';
-import {WidgetWrapper} from './components/modules';
+import {getWeatherForCity} from '../../../api/endpoints';
+import {WidgetWrapper} from '../';
+import './WidgetWeather.css';
 
 const defaultCity = 'copenhagen';
 
@@ -25,7 +26,7 @@ const getCardinal = (angle) => {
   return 'Nord';
 };
 
-class WeatherWidget extends Component {
+class WidgetWeather extends Component {
   static async getInitialProps({req, res, match}) {
     const lookupCity = match.params.city
       ? match.params.city
@@ -86,7 +87,7 @@ class WeatherWidget extends Component {
   render() {
     const {city, wind, humidity, temp} = this.state;
     return (
-      <div className="SomeBEMClassName">
+      <div className="widget__weather">
         <WidgetWrapper
           history={this.props.history}
           humidity={humidity}
@@ -100,4 +101,4 @@ class WeatherWidget extends Component {
   }
 }
 
-export default WeatherWidget;
+export default WidgetWeather;

@@ -8,9 +8,18 @@ import WidgetWrapperReadme from './README.md';
 import WidgetWrapper from './';
 
 storiesOf('WidgetWrapper', module)
-    .addDecorator(StoryRouter())
-    .add('Primary',
-        withDocs(WidgetWrapperReadme,
-            () => <WidgetWrapper type="primary" city="copenhagen" wind="5" humidity="55"
-                                 temp="43" onClick={action('clicked')}>Primary</WidgetWrapper>
-        ));
+  .addDecorator(StoryRouter())
+  .add(
+    'Primary',
+    withDocs(WidgetWrapperReadme, () => (
+      <WidgetWrapper
+        type="primary"
+        city="copenhagen"
+        wind="5"
+        humidity="55"
+        temp="43"
+        onClick={action('clicked')}>
+        Primary
+      </WidgetWrapper>
+    ))
+  );
