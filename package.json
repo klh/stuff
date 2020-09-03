@@ -20,7 +20,7 @@
     "express": "^4.16.2",
     "jest-enzyme": "7.0.1",
     "jest-image-snapshot": "2.7.0",
-    "puppeteer": "1.11.0",
+    "puppeteer": "1.13.0",
     "query-string": "6.2.0",
     "razzle": "2.4.0",
     "react": "^16.2.0",
